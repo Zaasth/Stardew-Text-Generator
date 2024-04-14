@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Inicio Main -->
+    <dialog id="modal" >
+
+        <section id="section_modal">
+            <h1>Sprite selected successfully!!</h1>
+            <button id="close_modal" class="btn btn-outline-danger" style="position: static; margin-top: 3%;">Close</button>
+        </section>
+        
+    </dialog>
+   <main class="container-fluid" id="main_principal">
+    
+    <section class="main_section">  
+        <div class="row">
+            <div class="col-lg-12">
+                <img src="/img/dialogue/dialogue box.png" alt="" width="80%">
+                <img id="npc_img" src="/img/characters/Abigail/default.png" alt="" class="btn p1">
+                <h1 id="main_text" class="btn p2">...</h1>
+                <h1  id="npc_text" class="btn p3">Abigail</h1>
+            </div>
+        </div>
+
+        <section style="padding-top: 1.4%;">
+            <input style="margin-right: 2%;" class="form__field" id="textin" type="text" autocomplete="off" placeholder="Enter your text">
+            <input class="button-6" id="butão" type="button" value="Generate text">
+            <input class="button-6" id="config" type="button" value="Settings">
+            
+        </section>
+        
+    </section>
+  
+    <section id="main2" style="color: white;" class="main_section2">  
+        <div class="row">
+            <div style="padding: 0%;" class="col-lg-12">
+                <h2 style="padding-top: 2%;">SETTINGS</h2>
+                <hr>
+                <input class="button-6" id="mute_music" type="button" value="Mute music">
+                <input class="button-6" id="ative_music" type="button" value="Activate music">
+                <input class="button-6" id="close" type="button" value="Close Settings">
+                <hr>
+                <details id="personagens">
+                    <summary id="char" class="pick" style="font-size: 2.5rem;">Characters</summary>
+                    <section class="buscar">
+                        <input class="input_busca" type="text" name="" id="inputtext" placeholder="Search" autocomplete="off">
+                    </section>
+                    <button class="pick button-6" id="btn_search">Search</button>
+                    <p style="color: red;" id="msg_error"></p>
+                    <hr>
+                    <details id="Abigail">
+                        <summary style="margin-top: 20px;" class="pick npc" id="npc"><img  style="border-radius: 8rem;" src="/img/characters/Abigail/default.png" alt=""></summary>
+                        <p style="margin-top: 1%;" class="default inline"> <img src="/img/characters/Abigail/default.png" alt=""></p>
+                        <p class="happy inline"><img src="/img/characters/Abigail/happy.png" alt=""></p>
+                        <p class="angry inline"><img src="/img/characters/Abigail/angry.png" alt=""></p>
+                        <p class="fear inline"><img src="/img/characters/Abigail/fear.png" alt=""></p>
+                      </details>          
+                      
+                      <details>
+                        <summary style="margin-top: 20px;" class="pick npc" id="npc"><img style="border-radius: 8rem;" src="/img/characters/Alex/default.png" alt=""></summary>
+                        <p style="margin-top: 1%;" class="default inline"><img src="/img/characters/Alex/default.png" alt=""></p>
+                        <p class="happy inline"><img src="/img/characters/Alex/happy.png" alt=""></p>
+                        <p class="angry inline"><img src="/img/characters/Alex/angry.png" alt=""></p>
+                        <p class="fear inline"><img src="/img/characters/Alex/fear.png" alt=""></p>
+                      </details>    
+                      
+                      <details>
+                        <summary style="margin-top: 20px;" class="pick npc" id="npc"><img style="border-radius: 8rem;" src="/img/characters/Caroline/default.png" alt=""></summary>
+                        <p style="margin-top: 1%;" class="default inline"><img src="/img/characters/Caroline/default.png" alt=""></p>
+                        <p class="happy inline"><img src="/img/characters/Caroline/happy.png" alt=""></p>
+                        <p class="angry inline"><img src="/img/characters/Caroline/angry.png" alt=""></p>
+                        <p class="fear inline"><img src="/img/characters/Caroline/fear.png" alt=""></p>
+                      </details>  
+                      
+                      <details>
+                        <summary style="margin-top: 20px;" class="pick npc" id="npc"><img style="border-radius: 8rem;" src="/img/characters/Clint/default.png" alt=""></summary>
+                        <p style="margin-top: 1%;" class="default inline"><img src="/img/characters/Clint/default.png" alt=""></p>
+                        <p class="happy inline"><img src="/img/characters/Clint/happy.png" alt=""></p>
+                        <p class="angry inline"><img src="/img/characters/Clint/angry.png" alt=""></p>
+                        <p class="fear inline"><img src="/img/characters/Clint/fear.png" alt=""></p>
+                      </details>  
+                      
+                      <details>
+                        <summary style="margin-top: 20px;" class="pick npc" id="npc"><img style="border-radius: 8rem;" src="/img/characters/Demetrius/default.png" alt=""></summary>
+                        <p style="margin-top: 1%;" class="default inline"><img src="/img/characters/Demetrius/default.png" alt=""></p>
+                        <p class="happy inline"><img src="/img/characters/Demetrius/happy.png" alt=""></p>
+                        <p class="angry inline"><img src="/img/characters/Demetrius/angry.png" alt=""></p>
+                        <p class="fear inline"><img src="/img/characters/Demetrius/fear.png" alt=""></p>
+                      </details>  
+                      
+                      <details>
+                        <summary style="margin-top: 20px;" class="pick npc" id="npc"><img style="border-radius: 8rem;" src="/img/characters/Elliott/default.png" alt=""></summary>
+                        <p style="margin-top: 1%;" class="default inline"><img src="/img/characters/Elliott/default.png" alt=""></p>
+                        <p class="happy inline"><img src="/img/characters/Elliott/happy.png" alt=""></p>
+                        <p class="angry inline"><img src="/img/characters/Elliott/angry.png" alt=""></p>
+                        <p class="fear inline"><img src="/img/characters/Elliott/fear.png" alt=""></p>
+                      </details>  
+                      
+                      <details>
+                        <summary style="margin-top: 20px;" class="pick npc" id="npc"><img style="border-radius: 8rem;" src="/img/characters/Emily/default.png" alt=""></summary>
+                        <p style="margin-top: 1%;" class="default inline"><img src="/img/characters/Emily/default.png" alt=""></p>
+                        <p class="happy inline"><img src="/img/characters/Emily/happy.png" alt=""></p>
+                        <p class="angry inline"><img src="/img/characters/Emily/angry.png" alt=""></p>
+                        <p class="fear inline"><img src="/img/characters/Emily/fear.png" alt=""></p>
+                      </details>  
+                      
+                </details>
+                
+                <audio id="music" src="/sounds/Stardew Valley OST - Pelican Town.mp3" autoplay loop></audio>
+            </div>
+        </div>
+    </section>
+   </main>
+   <!-- Fim Main -->
+
+<!--
+     <h1>Oi</h1>
+             <picture>  
+                <img class="npc_img" src="/img/characters/Abigail/default.png" alt="">
+                <img id="dialogue_main" src="/img/dialogue/dialogue box.png" alt="">
+            </picture>
+-->
+
+    <!-- Javacript -->
+    <script src="/js/app.js" type="module"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

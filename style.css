@@ -1,0 +1,287 @@
+@font-face {
+    font-family: "Stardew";
+    src: url("") format("opentype"), url(/fonts/StardewValley.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@900&display=swap');
+* {
+    margin: 0%;
+    padding: 0%;
+    text-align: center;
+}
+summary {
+    font-family: "Stardew";
+}
+picture {
+    position: relative;
+}
+h2 {
+    font-family: "Stardew";
+}
+main {
+    background-color: darkgoldenrod;
+    
+    background-image: url(https://i.pinimg.com/originals/95/26/f0/9526f08c1e26dcb4f6b9afd9d76af8ab.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top-center;
+    background-repeat: no-repeat; 
+    
+}
+.buscar {
+    width: 100%;
+    background-color: var(--cor-cinza);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.input_busca {
+    width: 20%;
+    border: 1px solid var(--cor-cinza-claro);
+    height: 40px;
+    padding-left: 20px;
+    font-size: 22px;
+    margin: 10px;
+    border-radius: 7px;
+}
+#main_principal {
+    background-color: #36A9F9;
+}
+.Hauto {
+    height: auto;
+}
+
+.inline {
+    display: inline-block;
+    margin-left: 1%;
+}
+.active1 {
+    background-color: green;
+}
+.rela {
+    position: relative;
+}
+.rela img {
+    object-fit: cover;
+}
+.btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.5em;
+    background-color: aqua;
+    
+}
+.btn.p1{
+    transform: translate(1230px, 89px);
+    width: 279px;
+    height: 279px;
+}
+@media (max-width: 1280px){
+    .btn.p1{
+        transform: translate(845px, 76px);
+        width: 179px;
+        height: 179px;
+    }
+}
+@media (max-width: 413px){
+    .btn.p1{
+        transform: translate(262px, 14px);
+        width: 69px;
+        height: 69px;
+    }
+}
+.btn.p2{
+    transform: translate(250px, 40px);
+    font-family: "Stardew";
+    font-size: 3rem;
+}
+@media (max-width: 1280px){
+    .btn.p2{
+        transform: translate(170px, 20px);
+        font-size: 2.3rem;
+    }
+}
+@media (max-width: 413px){
+    .btn.p2{
+        transform: translate(60px, 7px);
+        font-size: 0.7rem;
+    }
+}
+.btn.p3{
+    transform: translate(1290px, 387px);
+    font-family: "Stardew";
+    font-size: 3rem;
+}
+@media (max-width: 1280px){
+    .btn.p3{
+        transform: translate(879px, 260px);
+        font-size: 2.4rem;
+    }
+}
+@media (max-width: 413px){
+    .btn.p3{
+        transform: translate(271px, 76px);
+        font-size: 0.7rem;
+    }
+}
+.main_section {
+    height: 100vh;
+}
+.main_section2 {
+    height: 100vh;
+}
+.main_section3 {
+    height: 100vh;
+}
+.main_section2_auto {
+    height: auto;
+}
+.main_section2 img {
+    width: 80px;
+}
+.default:hover {
+    transform: scale(1.15);
+    transition-duration: 0.5s;
+    cursor: pointer;
+   
+}
+.happy:hover {
+    transform: scale(1.15);
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+.angry:hover {
+    transform: scale(1.15);
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+.fear:hover {
+    transform: scale(1.15);
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.main_section2 {
+    display: none;
+}
+.active {
+    display: block;
+}
+.sumir {
+    display: none;
+}
+.active .main_section2 {
+    animation: modal1 .4s;
+}
+
+@keyframes modal1 {
+    from{
+        opacity: 0;
+        transform: translate(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0, 0);
+    }
+}
+
+.modal1 {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: none;
+    border-radius: 20px 20px 10px 10px;
+    font-family: "Stardew";
+    padding: 0.8%;
+    box-shadow: 0 0 1em rgb(0 0 0 / .3);
+    color: green;
+}
+dialog::backdrop {
+   background-color: rgb(0 0 0 / .3);
+}
+
+.form__field {
+  font-family: "Stardew";
+  border: 0;
+  border-bottom: 2px solid gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.371);
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+
+
+/* CSS */
+.button-6 {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+@media (max-width: 413px){
+    .button-6 {
+        margin-top: 3%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 150px;
+    }
+}
+.button-6:hover,
+.button-6:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.button-6:hover {
+  transform: translateY(-1px);
+}
+
+.button-6:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
