@@ -36,6 +36,30 @@ function InputText(){
 
         AudioClick.play();
     });
+    input.addEventListener("keyup", function(e){
+        switch(e.key){
+            case "Enter":
+                let InputLength = input.value.length;
+        
+                if(InputLength < 30){
+                    MainText.innerHTML = `${input.value}`;
+                } else if(InputLength > 30 && InputLength < 60){
+                    MainText.innerHTML = `${input.value.slice(0, 30)}<br> ${input.value.slice(31, InputLength)}`;
+                } else if(InputLength > 60 && InputLength < 90) {
+                    MainText.innerHTML = `${input.value.slice(0, 30)}<br> ${input.value.slice(31, 60)} <br> ${input.value.slice(61, InputLength)}`;
+                } else if(InputLength > 90 && InputLength < 120) {
+                    MainText.innerHTML = `${input.value.slice(0, 30)}<br> ${input.value.slice(31, 60)} <br> ${input.value.slice(61, 90)} <br> ${input.value.slice(91, InputLength)}`;
+                } else if(InputLength > 121) {
+                    MainText.innerHTML = `O seu texto passou a quantidade de <br> caracteres permitidas`;
+                }
+
+                 AudioClick.play();
+            break;
+            }
+        
+        
+    });
+
 }
 
 /*

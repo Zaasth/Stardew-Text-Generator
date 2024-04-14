@@ -40,7 +40,6 @@ export function AlterarImg(){
             return confirm;
         }
         Filtro()
-
         function Filtro(){
             let Filtrar = Npcs.filter(FiltrarNpcName)
             const MsgErro = document.querySelector("#msg_error");
@@ -71,7 +70,63 @@ export function AlterarImg(){
             }
         } 
     });
-   
+   input.addEventListener("keyup", function(e){
+        switch (e.key) {
+            case "Enter":
+                AudioClick.play();
+                Main.classList.remove("main_section2_auto");
+                Main.classList.add("main_section3")
+                const FiltrarNpcName = function(e){
+                    let confirm = e == input.value.slice(0, 1).toUpperCase()+input.value.slice(1, input.value.length).toLowerCase();
+                    return confirm;
+                }
+                Filtro()
+                function Filtro(){
+                    let Filtrar = Npcs.filter(FiltrarNpcName)
+                    const MsgErro = document.querySelector("#msg_error");
+                    
+                    for (let i = 0; i < Npcs.length; i++) {
+                        if(Filtrar == Npcs[i]){
+                            MsgErro.innerHTML = ""
+                            for (let index = 0; index < document.querySelectorAll(`.npc`).length; index++) {
+                                document.querySelectorAll(`.npc`)[index].classList.add("sumir");
+                                document.querySelectorAll(`.happy`)[index].classList.add("sumir"); 
+                                document.querySelectorAll(`.default`)[index].classList.add("sumir"); 
+                                document.querySelectorAll(`.angry`)[index].classList.add("sumir");   
+                                document.querySelectorAll(`.fear`)[index].classList.add("sumir");   
+                            }
+                            document.querySelectorAll(`.npc`)[i].classList.remove("sumir");  
+                            document.querySelectorAll(`.happy`)[i].classList.remove("sumir");  
+                            document.querySelectorAll(`.default`)[i].classList.remove("sumir"); 
+                            document.querySelectorAll(`.angry`)[i].classList.remove("sumir");   
+                            document.querySelectorAll(`.fear`)[i].classList.remove("sumir"); 
+                        }
+                    }
+                    if(Filtrar == false){
+                        Main.classList.remove("main_section3")
+                        Main.classList.add("main_section2_auto");
+                        const MsgErro = document.querySelector("#msg_error");
+                        MsgErro.innerHTML = "<strong> Character not found. </strong>"
+                    
+                    }
+                } 
+            break;
+            case "Backspace":
+                AudioClick2.play();
+                Main.classList.remove("main_section3")
+                Main.classList.add("main_section2_auto");
+                setTimeout(() => {
+                    for (let index = 0; index < document.querySelectorAll(`.npc`).length; index++) {
+                        document.querySelectorAll(`.npc`)[index].classList.remove("sumir");  
+                        document.querySelectorAll(`.happy`)[index].classList.remove("sumir");  
+                        document.querySelectorAll(`.default`)[index].classList.remove("sumir"); 
+                        document.querySelectorAll(`.angry`)[index].classList.remove("sumir");   
+                        document.querySelectorAll(`.fear`)[index].classList.remove("sumir"); 
+                }
+                }, 0);
+            break;
+        }
+   });
     /*
     const detailschar = document.querySelector("#personagens");
         for (let i = 0; i < Npcs.length; i++) {
